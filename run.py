@@ -143,7 +143,7 @@ async def main(phone_number):
         await fetch_dialogs(client, phone_number)
         await fetch_advertisements(client, phone_number)
 
-if input("Create New Session Files ? [Yes / No] [Default: No] ").upper().startswith('Y'):
+if False and input("Create New Session Files ? [Yes / No] [Default: No] ").upper().startswith('Y'):
     for phone_number in PhoneNumbersList:
         print(f"Logging in {phone_number} ...")
         client = TelegramClient(f"Sessions/{phone_number}", API_ID, API_HASH)
